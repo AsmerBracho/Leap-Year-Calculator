@@ -9,20 +9,27 @@
 * Date: 26/10/2016
 */
 
+import java.util.Scanner;
+
 public class LeapYearCalculator {
+  
+    static Scanner sc = new Scanner(System.in);
+    
 	public static void main(String[] args) { // Main Method
-		LeapYear leapCalculator = new LeapYear(); // Create Calculator
+	  System.out.print("\nPlease Enter a Year: ");
+	  int year = sc.nextInt();
+	  LeapYear leapCalculator = new LeapYear(); // Create Calculator
 
 
 		// Test If the year is a Leap Year or not
-		leapCalculator.isLeapYear(1900); // Give it a Year to test
+		leapCalculator.isLeapYear(year); // Give it a Year to test
 		
 		//----------------------------------------------------------
 		System.out.println("\n\n");
 		//----------------------------------------------------------
 
 		// Display Year Calendar 
-		leapCalculator.displayCalendar(2016);
+		leapCalculator.displayCalendar(year);
 
 		//----------------------------------------------------------
 		System.out.println("\n\n");
